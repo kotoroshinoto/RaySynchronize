@@ -1,0 +1,7 @@
+[plugin.bump]
+commit_msg_tpl = "chore: Bump version {from} to {to}"
+perform_commit = true
+auto_tag = true
+tag_add_prefix = true
+allow_dirty = false
+vcs_provider = "git-cli"
