@@ -1,0 +1,30 @@
+[project]
+name = "RaySynchronize"
+version = "0.1.0"
+description = "\"This project aims to provide syncronization via pairing of ray actors and local interface classes\""
+authors = [
+    {name = "KotoroShinoto", email = "goochmi@gmail.com"},
+]
+dependencies = ["ray[all]>=2.44.1", "beartype>=0.20.2", "numpy>=2.2.4"]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "The Unlicense"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+packages = [
+    {include = "src/raysynchronize"}
+]
+
+[tool.pdm]
+distribution = true
+
+[dependency-groups]
+dev = [
+    "pdm-bump>=0.9.12",
+    "gitlint>=0.19.1",
+    "nox>=2025.2.9",
+    "pytest>=8.3.5",
+]
