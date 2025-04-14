@@ -15,11 +15,16 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 packages = [
-    {include = "src/raysynchronize"}
+    {include = "src/raysynchronize"},
 ]
 
 [tool.pdm]
 distribution = true
+
+[build]
+exclude = [
+    "src/raysynchronize/tests/**"
+]
 
 [dependency-groups]
 dev = [
@@ -27,4 +32,8 @@ dev = [
     "gitlint>=0.19.1",
     "nox>=2025.2.9",
     "pytest>=8.3.5",
+    "numpy>=2.2.4",
+    "ruff>=0.11.5",
+    "black>=25.1.0",
+    "pylint>=3.3.6",
 ]
